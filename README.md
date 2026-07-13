@@ -3,32 +3,51 @@
 </p>
 -->
 
-# osu!arcade
+# tatakae!
 
-A fork of the [osu!(lazer)][osu!] game client specifically for arcade-style usage. Not affiliated with ppy Pty Ltd. Project name may change for trademark reasons (we are not osu!).
+A fork of the [osu!(lazer)][osu!] game client specifically for arcade-style usage. 
 
-The original README.md file distributed with osu!(lazer) can be found at [ORIGINAL_README.md](./ORIGINAL_README.md)
-Contact: <dev@lucyfaria.net>
+Not affiliated with ppy Pty Ltd. or *osu!*.
+
+The original README.md file distributed with osu!(lazer) can be found at [ORIGINAL_README.md](./ORIGINAL_README.md).
+
+Contact relating to tatakae!: <me@lucyfaria.net>
 
 [osu!]: https://osu.ppy.sh
 
 ## What is this?
 
-osu!arcade is:
+tatakae! is:
 
 - [x] a modified version of osu!(lazer), meant for kiosk/arcade/convention use
 - [x] a hobby project maintained by a single person
 
-osu!arcade is NOT:
+tatakae! is NOT:
 
 - [ ] a commercial product
-- [ ] a replacement for osu!(lazer)
+- [ ] a replacement for osu!(lazer) (unless you're using this at an event)
 - [ ] AFFILIATED WITH osu! OR ppy Pty Ltd.
 - [ ] ENDORSED or APPROVED by ppy Pty Ltd. or peppy
 
+## Licence and Legal
+
+*tatakae!* (as of now, July 7, 2026) and its modifications to software is licensed under the MIT license, as is base *osu!*(lazer).
+
+*tatakae!* uses osu-resources which is under a CC-BY-NC 4.0 license. 
+
+If you are to use this fork at an event, contact peppy <pe@ppy.sh> beforehand as using the *osu!* logo and trademark without permission is illegal.
+
+### Original licensing text
+
+*osu!*'s code and framework are licensed under the [MIT licence](https://opensource.org/licenses/MIT). Please see [the licence file](LICENCE) for more information. [tl;dr](https://tldrlegal.com/license/mit-license) you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.
+
+Please note that this *does not cover* the usage of the "osu!" or "ppy" branding in any software, resources, advertising or promotion, as this is protected by trademark law.
+
+Please also note that game resources are covered by a separate licence. Please see the [ppy/osu-resources](https://github.com/ppy/osu-resources) repository for clarifications.
+
 ## Contributions
 
-This is a personal project of mine. Aiming to get something ready for Anime Revolution in Nov. 2026 :)
+tatakae! is a personal project of mine. I am aiming to get something ready for Anirevo in Nov. 2026 :)
 
 If you would like to contribute, feel free! Please note that I have no obligation to accept outside contributions and this is mainly a pet project of mine. So best case just reach out to me (Lucy Faria) via opening a GitHub discussion or emailing me beforehand before working on something so that your efforts are not wasted.
 
@@ -132,14 +151,3 @@ We have adopted some cross-platform, compiler integrated analyzers. They can pro
 
 JetBrains ReSharper InspectCode is also used for wider rule sets. You can run it from PowerShell with `.\InspectCode.ps1`. Alternatively, you can install ReSharper or use Rider to get inline support in your IDE of choice.
 
-## Licence
-
-*osu!arcade* (as of now, July 7, 2026) and its modifications to software is licensed under the MIT license, as is base *osu!*(lazer).
-
-*osu!arcade* uses osu-resources which is under a CC-BY-NC 4.0 license. 
-
-*osu!*'s code and framework are licensed under the [MIT licence](https://opensource.org/licenses/MIT). Please see [the licence file](LICENCE) for more information. [tl;dr](https://tldrlegal.com/license/mit-license) you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.
-
-Please note that this *does not cover* the usage of the "osu!" or "ppy" branding in any software, resources, advertising or promotion, as this is protected by trademark law.
-
-Please also note that game resources are covered by a separate licence. Please see the [ppy/osu-resources](https://github.com/ppy/osu-resources) repository for clarifications.
