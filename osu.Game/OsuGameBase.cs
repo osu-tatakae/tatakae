@@ -78,12 +78,14 @@ namespace osu.Game
     public partial class OsuGameBase : Framework.Game, ICanAcceptFiles, IBeatSyncProvider
     {
 #if DEBUG
-        public const string GAME_NAME = "osu!arcade (development)";
+        public const string GAME_NAME = "tatakae! (development)";
 #else
-        public const string GAME_NAME = "osu!arcade";
+        public const string GAME_NAME = "tatakae!";
 #endif
 
         public const string OSU_PROTOCOL = "osu://";
+
+        public const string TTK_PROTOCOL = "ttk://";
 
         /// <summary>
         /// The filename of the main client database.

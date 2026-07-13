@@ -531,14 +531,14 @@ namespace osu.Game.Screens.Menu
         {
             public ArcadeDisclaimerDialog(Action confirmed)
             {
-                HeaderText = "Welcome to osu!arcade";
+                HeaderText = "Welcome to tatakae!";
                 BodyText =
 @"By default, you are in operator/event mode (or just regular osu!).
 
-To enable and configure arcade mode, head to the added 'Arcade' tab in the settings.
+To enable and configure arcade mode, head to the added 'tatakae!' tab in the settings.
 
 Please share any feedback at:
-github.com/osu-arcade/osu-arcade";
+github.com/osu-tatakae/tatakae";
 
                 Icon = FontAwesome.Solid.SmileBeam;
 
