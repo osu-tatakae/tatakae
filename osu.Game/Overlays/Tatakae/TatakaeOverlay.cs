@@ -12,7 +12,7 @@ using osu.Game.Input.Bindings;
 namespace osu.Game.Overlays.Tatakae
 {
     /// <summary>
-    /// Overlay to customize Arcade mode settings.
+    /// User-facing overlay to access usermode unchangeable settings.
     /// Adapted from SkinEditorOverlay.
     /// </summary>
     /// <see cref="SkinEditor.SkinEditorOverlay"/>

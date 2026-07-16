@@ -28,13 +28,14 @@ namespace osu.Game.Overlays.Settings.Sections.Audio
                     DisplayAsPercentage = true,
                     PlaySamplesOnAdjust = false,
                 }),
-                new SettingsItemV2(new FormSliderBar<double>
-                {
-                    Caption = AudioSettingsStrings.MasterVolumeInactive,
-                    Current = config.GetBindable<double>(OsuSetting.VolumeInactive),
-                    KeyboardStep = 0.01f,
-                    DisplayAsPercentage = true
-                }),
+                // tatakae!: users shouldn't care about this
+                // new SettingsItemV2(new FormSliderBar<double>
+                // {
+                //     Caption = AudioSettingsStrings.MasterVolumeInactive,
+                //     Current = config.GetBindable<double>(OsuSetting.VolumeInactive),
+                //     KeyboardStep = 0.01f,
+                //     DisplayAsPercentage = true
+                // }),
                 new SettingsItemV2(new FormSliderBar<double>
                 {
                     Caption = AudioSettingsStrings.EffectVolume,

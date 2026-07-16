@@ -10,6 +10,11 @@ namespace osu.Game.Localisation
         private const string prefix = @"osu.Game.Resources.Localisation.ButtonSystem";
 
         /// <summary>
+        /// "tutorial"
+        /// </summary>
+        public static LocalisableString Tutorial => new TranslatableString(getKey(@"tutorial"), @"tutorial");
+
+        /// <summary>
         /// "solo"
         /// </summary>
         public static LocalisableString Solo => new TranslatableString(getKey(@"solo"), @"solo");

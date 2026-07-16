@@ -7,6 +7,9 @@ using osu.Game.Graphics.Sprites;
 
 namespace osu.Game.Overlays.Tatakae
 {
+    // TTKTODO: add back all the settings here
+    // ideally they all set defaults and the user SettingsOverlay
+    // can temporarily override them
     [Cached(typeof(TatakaeSettings))]
     public partial class TatakaeSettings : VisibilityContainer
     {

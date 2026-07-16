@@ -28,8 +28,9 @@ namespace osu.Game.Overlays.Settings.Sections
                 new AlertsAndPrivacySettings(),
             };
 
-            if (RuntimeInfo.IsDesktop)
-                Add(new IntegrationSettings());
+            // tatakae!: arcade user shouldn't care about their discord status LOL
+            // if (RuntimeInfo.IsDesktop)
+            // Add(new IntegrationSettings());
         }
     }
 }

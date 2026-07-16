@@ -24,6 +24,7 @@ using osu.Game.Screens.OnlinePlay.Lounge.Components;
 using osu.Game.Screens.Select;
 using osu.Game.Screens.Select.Filter;
 using osu.Game.Skinning;
+using osu.Game.Tatakae.Configuration;
 using osu.Game.Users;
 
 namespace osu.Game.Configuration
@@ -95,16 +96,19 @@ namespace osu.Game.Configuration
 
             SetDefault(OsuSetting.ShowOnlineExplicitContent, false);
 
-            SetDefault(OsuSetting.NotifyOnUsernameMentioned, true);
-            SetDefault(OsuSetting.NotifyOnPrivateMessage, true);
-            SetDefault(OsuSetting.NotifyOnFriendPresenceChange, true);
+            // tatakae!: sane defaults if arcade logged in as their user
+            // TTKTODO: also make sure we're not connecting to chat!!! just in case!
+            SetDefault(OsuSetting.NotifyOnUsernameMentioned, false);
+            SetDefault(OsuSetting.NotifyOnPrivateMessage, false);
+            SetDefault(OsuSetting.NotifyOnFriendPresenceChange, false);
 
             // Audio
             SetDefault(OsuSetting.VolumeInactive, 0.25, 0, 1, 0.01);
 
-            SetDefault(OsuSetting.MenuVoice, true);
+            // tatakae!: sorry mr welcome to oss
+            SetDefault(OsuSetting.MenuVoice, false);
             SetDefault(OsuSetting.MenuMusic, true);
-            SetDefault(OsuSetting.MenuTips, true);
+            SetDefault(OsuSetting.MenuTips, false);
 
             SetDefault(OsuSetting.AudioOffset, 0, -500.0, 500.0, 1);
 
@@ -191,12 +195,13 @@ namespace osu.Game.Configuration
 
             SetDefault(OsuSetting.UIHoldActivationDelay, 200.0, 0.0, 500.0, 50.0);
 
-            SetDefault(OsuSetting.IntroSequence, IntroSequence.Triangles);
+            // tatakae!: less jarring for setup lol
+            SetDefault(OsuSetting.IntroSequence, IntroSequence.Welcome);
 
             SetDefault(OsuSetting.MenuBackgroundSource, BackgroundSource.Skin);
             SetDefault(OsuSetting.SeasonalBackgroundMode, SeasonalBackgroundMode.Sometimes);
 
-            SetDefault(OsuSetting.DiscordRichPresence, DiscordRichPresenceMode.Full);
+            SetDefault(OsuSetting.DiscordRichPresence, DiscordRichPresenceMode.Off);
 
             SetDefault(OsuSetting.EditorDim, 0.25f, 0f, 1f, 0.25f);
             SetDefault(OsuSetting.EditorWaveformOpacity, 0.25f, 0f, 1f, 0.25f);
@@ -238,6 +243,8 @@ namespace osu.Game.Configuration
 
             SetDefault(OsuSetting.DashboardSortMode, UserSortCriteria.LastVisit);
             SetDefault(OsuSetting.DashboardDisplayStyle, OverlayPanelDisplayStyle.Card);
+
+            SetDefault(OsuSetting.TatakaeMode, TatakaeMode.EventMode);
         }
 
         protected override bool CheckLookupContainsPrivateInformation(OsuSetting lookup)
@@ -469,5 +476,7 @@ namespace osu.Game.Configuration
 
         DashboardSortMode,
         DashboardDisplayStyle,
+
+        TatakaeMode
     }
 }

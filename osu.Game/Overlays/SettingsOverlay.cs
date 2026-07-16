@@ -23,6 +23,8 @@ using osuTK.Graphics;
 
 namespace osu.Game.Overlays
 {
+    // tatakae!: rejigged to be "User Settings" instead of global settings
+    // for real settings, see TatakaeSettings
     public partial class SettingsOverlay : SettingsPanel, INamedOverlayComponent
     {
         public IconUsage Icon => OsuIcon.Settings;
@@ -33,18 +35,22 @@ namespace osu.Game.Overlays
         {
             var sections = new List<SettingsSection>
             {
+                // tatakae!: sections adjusted here
+                // check TatakaeSettings.cs for full settings list
+
                 // This list should be kept in sync with ScreenBehaviour.
                 new GeneralSection(),
                 new SkinSection(),
                 new InputSection(createSubPanel(new KeyBindingPanel())),
-                new UserInterfaceSection(),
+                // if re-adding this one, make sure to remove all the extraneous things
+                // new UserInterfaceSection(),
                 new GameplaySection(),
                 new RulesetSection(),
                 new AudioSection(),
-                new GraphicsSection(),
-                new OnlineSection(),
-                new MaintenanceSection(),
-                new DebugSection()
+                // new GraphicsSection(),
+                // new OnlineSection(),
+                // new MaintenanceSection(),
+                // new DebugSection()
             };
 
             var today = DateTimeOffset.Now;

@@ -217,6 +217,8 @@ namespace osu.Game
 
         private MainMenu menuScreen;
 
+        private TatakaeModeBanner tatakaeModeBanner;
+
         [CanBeNull]
         private DevBuildBanner devBuildBanner;
 
@@ -1164,8 +1166,14 @@ namespace osu.Game
                 Margin = new MarginPadding(5),
             }, topMostOverlayContent.Add);
 
+
             if (!IsDeployedBuild)
+            {
                 loadComponentSingleFile(devBuildBanner = new DevBuildBanner(), ScreenContainer.Add);
+            }
+
+            loadComponentSingleFile(tatakaeModeBanner = new TatakaeModeBanner(IsDeployedBuild), ScreenContainer.Add);
+
 
             loadComponentSingleFile(osuLogo, _ =>
             {
@@ -1783,11 +1791,13 @@ namespace osu.Game
                 case IntroScreen intro:
                     introScreen = intro;
                     devBuildBanner?.Show();
+                    tatakaeModeBanner.Show();
                     break;
 
                 case MainMenu menu:
                     menuScreen = menu;
                     devBuildBanner?.Show();
+                    tatakaeModeBanner.Show();
                     break;
 
                 case Player player:
@@ -1796,6 +1806,7 @@ namespace osu.Game
 
                 default:
                     devBuildBanner?.Hide();
+                    tatakaeModeBanner.Hide();
                     break;
             }
 
