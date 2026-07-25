@@ -2,10 +2,12 @@
 using osu.Framework.Allocation;
 using osu.Framework.Bindables;
 using osu.Framework.Graphics;
+using osu.Framework.Graphics.Shapes;
 using osu.Framework.Graphics.Containers;
 using osu.Game.Configuration;
 using osu.Game.Graphics.Cursor;
 using osu.Game.Overlays;
+using osu.Game.Graphics;
 using osu.Game.Screens.Tatakae.Components.Menus;
 using osu.Game.Tatakae.Configuration;
 
@@ -45,6 +47,11 @@ namespace osu.Game.Screens.Tatakae
                         Height = TOPBAR_HEIGHT,
                         Children = new Drawable[]
                         {
+                            new Box
+                            {
+                                RelativeSizeAxes = Axes.Both,
+                                Colour = colours.Background3
+                            },
                             new TatakaeTabSwitcherControl
                             {
                                 Anchor = Anchor.BottomLeft,
