@@ -1,6 +1,6 @@
 namespace osu.Game.Screens.Tatakae
 {
-    public enum TatakaeScreenTab
+    public enum TatakaeTabMode
     {
         General,
         Defaults,

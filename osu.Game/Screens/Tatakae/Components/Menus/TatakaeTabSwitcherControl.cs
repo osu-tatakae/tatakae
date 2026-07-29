@@ -13,7 +13,7 @@ using osuTK.Graphics;
 
 namespace osu.Game.Screens.Tatakae.Components.Menus
 {
-    public partial class TatakaeTabSwitcherControl : OsuTabControl<TatakaeScreenTab>
+    public partial class TatakaeTabSwitcherControl : OsuTabControl<TatakaeTabMode>
     {
         public TatakaeTabSwitcherControl()
         {
@@ -29,17 +29,12 @@ namespace osu.Game.Screens.Tatakae.Components.Menus
         private void load(OverlayColourProvider colourProvider)
         {
             AccentColour = colourProvider.Light3;
-
-            AddInternal(new Box
-            {
-                RelativeSizeAxes = Axes.Both,
-                Colour = colourProvider.Background2,
-            });
+            StripColour = colourProvider.Background2;
         }
 
-        protected override Dropdown<TatakaeScreenTab> CreateDropdown() => null!;
+        protected override Dropdown<TatakaeTabMode> CreateDropdown() => null!;
 
-        protected override TabItem<TatakaeScreenTab> CreateTabItem(TatakaeScreenTab value) => new TabItem(value);
+        protected override TabItem<TatakaeTabMode> CreateTabItem(TatakaeTabMode value) => new TabItem(value);
 
         private partial class TabItem : OsuTabItem
         {
@@ -47,7 +42,7 @@ namespace osu.Game.Screens.Tatakae.Components.Menus
             private Color4 backgroundIdleColour;
             private Color4 backgroundHoverColour;
 
-            public TabItem(TatakaeScreenTab value)
+            public TabItem(TatakaeTabMode value)
                 : base(value)
             {
                 Text.Margin = new MarginPadding(10);
