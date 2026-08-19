@@ -17,20 +17,30 @@ namespace osu.Game.Overlays.Settings.Sections
     {
         public override LocalisableString Header => CommonStrings.General;
 
+        private bool showOperatorOptions;
         public override Drawable CreateIcon() => new SpriteIcon
         {
             Icon = OsuIcon.Settings
         };
 
+        public GeneralSection(bool showOperatorOptions = false)
+        {
+            this.showOperatorOptions = showOperatorOptions;
+        }
+
         [BackgroundDependencyLoader]
         private void load(UpdateManager? updateManager)
         {
-            // Add(new QuickActionSettings());
+            if (showOperatorOptions)
+            {
+                Add(new QuickActionSettings());
+                if (RuntimeInfo.IsDesktop)
+                    Add(new InstallationSettings());
+            }
             Add(new LanguageSettings());
             // if (updateManager?.CanCheckForUpdate == true)
             // Add(new UpdateSettings());
-            // if (RuntimeInfo.IsDesktop)
-            // Add(new InstallationSettings());
+
         }
     }
 }

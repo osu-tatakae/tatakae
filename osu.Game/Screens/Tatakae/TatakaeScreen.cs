@@ -42,6 +42,12 @@ namespace osu.Game.Screens.Tatakae
                 RelativeSizeAxes = Axes.Both,
                 Children = new Drawable[]
                 {
+                    new Box
+                    {
+                        Name = "bg",
+                        RelativeSizeAxes = Axes.Both,
+                        Colour = colours.Background3
+                    },
                     screenContainer = new ScreenContainer
                     {
                         Name = "Screen container",
@@ -53,19 +59,11 @@ namespace osu.Game.Screens.Tatakae
                         Name = "Topbar",
                         RelativeSizeAxes = Axes.X,
                         Height = TOPBAR_HEIGHT,
-                        Children = new Drawable[]
+                        Child = new TatakaeTabSwitcherControl
                         {
-                            new Box
-                            {
-                                RelativeSizeAxes = Axes.Both,
-                                Colour = colours.Background3
-                            },
-                            new TatakaeTabSwitcherControl
-                            {
-                                Anchor = Anchor.BottomLeft,
-                                Origin = Anchor.BottomLeft,
-                                Current = Tab
-                            }
+                            Anchor = Anchor.BottomLeft,
+                            Origin = Anchor.BottomLeft,
+                            Current = Tab
                         }
                     }
                 }

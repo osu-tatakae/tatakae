@@ -14,7 +14,6 @@ using osu.Framework.Graphics.Sprites;
 using osu.Framework.Localisation;
 using osu.Framework.Testing;
 using osu.Game.Graphics;
-using osu.Game.Graphics.Cursor;
 using osu.Game.Localisation;
 using osu.Game.Overlays.Settings;
 using osu.Game.Overlays.Settings.Sections;
@@ -24,7 +23,7 @@ using osuTK.Graphics;
 namespace osu.Game.Overlays
 {
     // tatakae!: rejigged to be "User Settings" instead of global settings
-    // for real settings, see TatakaeSettings
+    // for real settings, see TatakaeScreen
     public partial class SettingsOverlay : SettingsPanel, INamedOverlayComponent
     {
         public IconUsage Icon => OsuIcon.Settings;
@@ -36,7 +35,6 @@ namespace osu.Game.Overlays
             var sections = new List<SettingsSection>
             {
                 // tatakae!: sections adjusted here
-                // check TatakaeSettings.cs for full settings list
 
                 // This list should be kept in sync with ScreenBehaviour.
                 new GeneralSection(),
@@ -67,12 +65,12 @@ namespace osu.Game.Overlays
 
         protected override Drawable CreateHeader() => new SettingsHeader(Title, Description);
 
-        protected override Drawable CreateFooter() => new OsuContextMenuContainer
-        {
-            RelativeSizeAxes = Axes.X,
-            AutoSizeAxes = Axes.Y,
-            Child = new SettingsFooter()
-        };
+        // protected override Drawable CreateFooter() => new OsuContextMenuContainer
+        // {
+        //     RelativeSizeAxes = Axes.X,
+        //     AutoSizeAxes = Axes.Y,
+        //     Child = new SettingsFooter()
+        // };
 
         public SettingsOverlay()
             : base(false)

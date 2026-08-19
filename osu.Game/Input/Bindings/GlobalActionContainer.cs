@@ -113,7 +113,7 @@ namespace osu.Game.Input.Bindings
             new KeyBinding(new[] { InputKey.Control, InputKey.Shift, InputKey.T }, GlobalAction.NextSkin),
 
             new KeyBinding(InputKey.F10, GlobalAction.ToggleGameplayMouseButtons),
-            new KeyBinding(InputKey.F12, GlobalAction.TakeScreenshot),
+            new KeyBinding(InputKey.None, GlobalAction.TakeScreenshot),
         };
 
         private static IEnumerable<KeyBinding> tatakaeKeyBindings => new[]

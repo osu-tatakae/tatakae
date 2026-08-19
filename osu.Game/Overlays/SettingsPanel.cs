@@ -335,8 +335,8 @@ namespace osu.Game.Overlays
             {
                 base.UpdateAfterChildren();
 
-                // no null check because the usage of this class is strict
-                HeaderBackground!.Alpha = -ExpandableHeader!.Y / ExpandableHeader.LayoutSize.Y;
+                if (HeaderBackground != null && ExpandableHeader != null)
+                    HeaderBackground!.Alpha = -ExpandableHeader!.Y / ExpandableHeader.LayoutSize.Y;
             }
         }
     }

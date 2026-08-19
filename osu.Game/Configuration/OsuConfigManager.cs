@@ -243,7 +243,7 @@ namespace osu.Game.Configuration
             SetDefault(OsuSetting.DashboardSortMode, UserSortCriteria.LastVisit);
             SetDefault(OsuSetting.DashboardDisplayStyle, OverlayPanelDisplayStyle.Card);
 
-            SetDefault(OsuSetting.TatakaeMode, TatakaeMode.EventMode);
+            SetDefault(OsuSetting.TatakaeMode, TatakaeMode.FreePlayMode);
         }
 
         protected override bool CheckLookupContainsPrivateInformation(OsuSetting lookup)

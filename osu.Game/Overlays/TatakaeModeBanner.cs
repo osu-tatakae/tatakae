@@ -55,11 +55,12 @@ namespace osu.Game.Overlays
         {
             switch (tatakaeMode.Value)
             {
-                case TatakaeMode.EventMode:
-                    modeText.Text = "EVENT MODE";
+                case TatakaeMode.FreePlayMode:
+                    modeText.Text = "FREE PLAY";
                     break;
                 case TatakaeMode.CreditMode:
-                    throw new System.NotImplementedException();
+                    modeText.Text = "CREDITS 0";
+                    break;
             }
         }
 
