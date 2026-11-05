@@ -5,6 +5,8 @@
 
 # tatakae!
 
+**This project is not currently developed.** If interested in developing, contact me at the email below for the project that is.
+
 A fork of the [osu!(lazer)][osu!] game client specifically for arcade-style usage.
 
 Not affiliated with ppy Pty Ltd. or _osu!_.
